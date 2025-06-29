@@ -1,0 +1,16 @@
+1. Navigate to your project directory:
+   cd C:\Users\rajai\ML-algorithm
+
+2. Create your virtual environment:
+   python -m venv venv
+
+3. Activate it using the Command Prompt command:
+   venv\Scripts\activate
+
+4. You should now see (venv) at the front of your terminal line.
+
+5. Now that it's active, install your requirements:
+   pip install -r requirements.txt
+
+6. Finally, run your script:
+   python Linear_Regression/implementation.py

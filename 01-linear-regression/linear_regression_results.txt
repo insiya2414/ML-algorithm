@@ -1,0 +1,56 @@
+--- Cleaned Dataset (First 5 Rows) ---
+   transaction_date  house_age  ...  longitude  price_per_unit_area
+0          2012.917       32.0  ...  121.54024                 37.9
+1          2012.917       19.5  ...  121.53951                 42.2
+2          2013.583       13.3  ...  121.54391                 47.3
+3          2013.500       13.3  ...  121.54391                 54.8
+4          2012.833        5.0  ...  121.54245                 43.1
+
+[5 rows x 7 columns]
+----------------------------------------
+
+--- Model 1: Simple Linear Regression (Distance to MRT vs. Price) ---
+Coefficient for 'distance_to_mrt': -0.0074
+Evaluation (R-squared): 0.5390
+
+--- Model 2: Multiple Linear Regression (All Features vs. Price) ---
+Coefficients for each feature:
+  - transaction_date: 5.4407
+  - house_age: -0.2708
+  - distance_to_mrt: -0.0048
+  - convenience_stores: 1.0914
+  - latitude: 229.0431
+  - longitude: -29.4926
+
+Evaluation (R-squared): 0.6811
+
+--- Model 3: Polynomial Regression (Curved Relationship) ---
+Polynomial model R-squared: 0.5865
+___________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Let's Break Down Your Results
+
+1. Cleaned Dataset:
+The first part of your output confirms that the data was loaded and the column names were cleaned correctly. This is a perfect start.
+
+2. Model 1: Simple Linear Regression
+Coefficient for 'distance_to_mrt': -0.0074
+Interpretation: For every extra meter you move away from an MRT station, the house price is predicted to decrease by 0.0074 units (in this dataset's price scale). The negative sign is key—it shows an inverse relationship, which makes perfect real-world sense.
+Evaluation (R-squared): 0.5390
+Interpretation: This model, using only the distance to the MRT, can explain about 53.9% of the variation in house prices. That's a decent start for a single feature!
+
+3. Model 2: Multiple Linear Regression (The Best Model)
+Coefficients for each feature:
+house_age: -0.2708: Older houses tend to be slightly cheaper.
+convenience_stores: 1.0914: More stores nearby significantly increases the price.
+latitude: 229.0431: This is a huge positive number! It suggests that location (specifically, moving north in this dataset's geographical area) is a massive driver of price.
+Evaluation (R-squared): 0.6811
+Interpretation: This is your best result. By using all the features together, your model can now explain 68.1% of the variation in house prices. This is a significant improvement over the simple model and shows why using multiple features is so powerful.
+
+4. Model 3: Polynomial Regression
+Polynomial model R-squared: 0.5865
+Interpretation: By modeling the distance_to_mrt as a curve instead of a straight line, you improved the R-squared from 53.9% to 58.7%. This tells you that the relationship between price and distance isn't perfectly linear. For instance, the price might drop off quickly at first and then more slowly as you get very far away.
+Key Takeaways from Your Analysis
+More Data is Better: The Multiple Linear Regression model was the strongest, proving that combining multiple features gives a more accurate view of the world.
+Location is King: The latitude and distance_to_mrt coefficients show that location is the most critical factor in this dataset for determining house price.
+Linear Regression Works: You have successfully used a simple, interpretable algorithm to build a useful predictive model.
