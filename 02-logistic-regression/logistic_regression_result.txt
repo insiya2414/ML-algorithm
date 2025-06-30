@@ -1,0 +1,49 @@
+
+--- Model 1: Simple Logistic Regression (Age vs. Purchased) ---
+Coefficient for 'Age': 1.7182
+Intercept: -0.8652
+Accuracy: 0.9125
+[[50  2]
+ [ 5 23]]
+              precision    recall  f1-score   support
+
+           0       0.91      0.96      0.93        52
+           1       0.92      0.82      0.87        28
+
+    accuracy                           0.91        80
+   macro avg       0.91      0.89      0.90        80
+weighted avg       0.91      0.91      0.91        80
+
+
+--- Model 2: Multiple Logistic Regression (All Features vs. Purchased) ---
+Coefficients for each feature:
+  - Gender: 0.1364
+  - Age: 2.0377
+  - EstimatedSalary: 1.1332
+Intercept: -1.0662
+Accuracy: 0.8875
+[[50  2]
+ [ 7 21]]
+              precision    recall  f1-score   support
+
+           0       0.88      0.96      0.92        52
+           1       0.91      0.75      0.82        28
+
+    accuracy                           0.89        80
+   macro avg       0.90      0.86      0.87        80
+weighted avg       0.89      0.89      0.88        80
+
+
+--- Model 3: Polynomial Logistic Regression (Age & Salary, degree=2) ---
+Polynomial model accuracy: 0.9250
+[[48  4]
+ [ 2 26]]
+              precision    recall  f1-score   support
+
+           0       0.96      0.92      0.94        52
+           1       0.87      0.93      0.90        28
+
+    accuracy                           0.93        80
+   macro avg       0.91      0.93      0.92        80
+weighted avg       0.93      0.93      0.93        80
+
