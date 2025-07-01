@@ -1,0 +1,21 @@
+
+--- Decision Tree Classifier (Good/Bad Wine) ---
+Accuracy: 0.8750
+Confusion Matrix:
+[[264   9]
+ [ 31  16]]
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.97      0.93       273
+           1       0.64      0.34      0.44        47
+
+    accuracy                           0.88       320
+   macro avg       0.77      0.65      0.69       320
+weighted avg       0.86      0.88      0.86       320
+
+
+--- Decision Tree Regressor (Predict Quality Score) ---
+Mean Squared Error: 0.4380
+R^2 Score: 0.3298
+
