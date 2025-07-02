@@ -9,7 +9,6 @@ import numpy as np
 
 # --- 1. Load the Data ---
 try:
-    # This time we use your actual folder name "01-linear-regression"
     df = pd.read_csv('01-linear-regression/Real estate.csv')
 except FileNotFoundError:
     print("Error: 'data/real_estate_data.csv' not found.")

@@ -1,0 +1,5 @@
+
+--- Random Forest Regressor (Car Price Prediction) ---
+Mean Squared Error: 0.8822
+Mean Absolute Error: 0.6172
+R^2 Score: 0.9617
