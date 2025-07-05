@@ -1,0 +1,16 @@
+
+--- Gradient Boosting Classifier (Ionosphere Dataset) ---
+Accuracy: 0.9296
+Confusion Matrix:
+[[24  4]
+ [ 1 42]]
+Classification Report:
+              precision    recall  f1-score   support
+
+         bad       0.96      0.86      0.91        28
+        good       0.91      0.98      0.94        43
+
+    accuracy                           0.93        71
+   macro avg       0.94      0.92      0.92        71
+weighted avg       0.93      0.93      0.93        71
+
